@@ -15,7 +15,7 @@ if(!values.email){
 else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
     errors.email="please enter valid email"
 }
-if(!values.pass1 || !values.pass2){
+if(!values.pass1){
     errors.pass1="password is required";
 }
 else if(values.pass1!==values.pass2){
@@ -34,34 +34,39 @@ const formik= useFormik({
     }
 })
   return (
-    <div className='mt-3 container'>
-      <form className='form' onSubmit={formik.handleSubmit}>
-        <input id='name' onChange={formik.handleChange} className='form-control' type='text' value={formik.values.name}  placeholder='Enter Name' />
+   <>
+   <div className='card container mt-3'>
+        <div className='card-body'>
+        <form className='form' onSubmit={formik.handleSubmit}>
+        <input id='name'onBlur={formik.handleBlur} onChange={formik.handleChange} className='form-control' type='text' value={formik.values.name}  placeholder='Enter Name' />
         {formik.touched.name && formik.errors.name ? <span className='text text-danger'>{formik.errors.name}</span> : null}
         <br />
-        <input id='email' onChange={formik.handleChange} className='form-control' type='text' value={formik.values.email}  
+        <input id='email' onBlur={formik.handleBlur} onChange={formik.handleChange} className='form-control' type='text' value={formik.values.email}  
         placeholder='Enter Email'/> 
     {
       formik.touched.email ?? formik.errors.email ? <span className='text text-danger'>{formik.errors.email}</span>: null
     }
         <br />
-        <input id='pass1'  className='form-control' type='password' value={formik.values.pass1} 
+        <input id='pass1' onBlur={formik.handleBlur}  className='form-control' type='password' value={formik.values.pass1} 
         onChange={formik.handleChange} placeholder='Enter Password' /> 
         {
 formik.touched.pass1&& formik.errors.pass1 ? <span className='text text-danger'>{formik.errors.pass1}</span> : null
         }
         <br />
-  <input id='pass2' onChange={formik.handleChange} className='form-control' type='password' value={formik.values.pass2} 
+  <input id='pass2' onBlur={formik.handleBlur} onChange={formik.handleChange} className='form-control' type='password' value={formik.values.pass2} 
   placeholder='Re-enter password' />
   {
     formik.touched.pass2 && formik.errors.pass2 ? <span className='text text-danger'>{formik.errors.pass2}</span> : null
   }
   <div className='container mt-3'>
-    <button type='submit' className='btn btn-primary' onClick={formik.handleSubmit}>Submit</button>
-    <button className='btn btn-dark' onClick={formik.handleReset}>Reset All</button>
+    <button type='submit' className='btn btn-primary m-2' onClick={formik.handleSubmit}>Submit</button>
+    <button className='btn btn-dark m-2' onClick={formik.handleReset}>Reset All</button>
   </div>
       </form>
-    </div>
+        </div>
+      </div>
+   </>
+    
   )
 }
 
