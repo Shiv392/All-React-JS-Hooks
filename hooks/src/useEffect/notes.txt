@@ -1,0 +1,27 @@
+useEffect is just like componentdidmount() and componentwillupdate() lifecycle of 
+class components.
+
+useEffect hooks takes a function or task that is exicuted after every changes in updation
+of specified dependancy.
+
+syntax :
+
+useEffect(function,[
+    dependancy
+])
+
+here, function is exicuted every time when ever state of dependancy changes.
+
+exm.
+
+const [id,setID]=useState(0);
+useEffect(()=>{
+  console.log('this is shiv soni');
+},[])
+empty array shows that callback function will exicuted once all react app render in brower.
+it works like componentdidmount() of class components.
+
+useEffect(()=>{
+console.log('this is shiv soni');
+},[id])
+it will exicuted functio every time whenever id state changes.

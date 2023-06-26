@@ -16,7 +16,7 @@ function ApiDependency() {
     <div className='container mt-2'>
       <p className='text text-danger'>useEffect will call every time according to input field dependancy</p>
      <form>
-        <div className='col-6'>
+        <div className='col'>
             <input className='form-control' type='number' value={id} onChange={e=> setId(e.target.value)} id='id' />
            </div>
      </form>
