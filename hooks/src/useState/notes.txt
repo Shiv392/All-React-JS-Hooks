@@ -1,0 +1,29 @@
+useState is a react hooks that is used to work with state of the application.
+import{useState} from 'react'
+
+syntax of useState:-
+
+const [state_name, state_updation_method]=useState(intialState);
+
+const [id,setId]=useState(0);
+
+this syntax is showing that we have an state called 'id' whose initial value is 0.
+whenver we wants to update this state we have to call / use setId that will update state.
+
+-imagin we are making a button , whenver we click in button , id wiill increase 
+<button className='btn btn-dark' onclick={handleClick}>Add State</button>
+const handleClick=()=>{
+    setId(id+1);
+}
+
+2.it can also intialize empty object state
+const [person,setPerson]=useState({
+    name:'',age:20,address:'',city:'',country:'',phonenumber:null
+})
+
+3.we can define string value 
+const [name,setName]=useState('');
+
+4.we can define array as well
+const [number,setNumber]=useState([]);
+
