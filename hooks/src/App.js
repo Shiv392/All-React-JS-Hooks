@@ -5,6 +5,7 @@ import UseStateForm from './useState/UseStateForm';
 import ApiCall from './useEffect/ApiCall';
 import ApiDependency from './useEffect/ApiDependency';
 import Counter_useState from './useReducer/Counter_useState';
+import Exmple from './useRef/Exmple';
 
 
 
@@ -16,7 +17,7 @@ function App() {
    <ApiCall />
    <ApiDependency />
    <Counter_useState />
-
+    <Exmple />
    </>
   );
 }

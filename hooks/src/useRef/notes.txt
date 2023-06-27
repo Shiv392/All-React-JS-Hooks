@@ -1,0 +1,15 @@
+In React, the useRef hook is used to create a mutable reference 
+that can persist across re-renders of a component. It allows you to access
+and modify the properties of a DOM element or any other value without
+causing a re-render.
+
+import {useRef} from 'react';
+
+assigning any element
+const inputref=useRef(null);
+
+<input type="text' ref={inputref} />
+
+now we can access input elemnt by ussing inputred.current.
+for value- inputref.current.value();
+to get focused - inputref.current.focus();
