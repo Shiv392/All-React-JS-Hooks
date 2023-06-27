@@ -1,0 +1,10 @@
+useReducer also works like useState.
+it takes reducer function and initial state as props and returns 
+array of two values called 1.The first one is the state value, 
+and the second value is the dispatch function which is further used to trigger an action with the help of array destructuring.  
+
+syntax : 
+import {useReducer} from 'react'
+
+const [state,dispatch]=useReducer(reducer,initialstate); 
+
