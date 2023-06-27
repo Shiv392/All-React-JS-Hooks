@@ -6,6 +6,7 @@ import ApiCall from './useEffect/ApiCall';
 import ApiDependency from './useEffect/ApiDependency';
 import Counter_useState from './useReducer/Counter_useState';
 import Exmple from './useRef/Exmple';
+import Parent from './useRef/forwordRef/Parent';
 
 
 
@@ -18,6 +19,7 @@ function App() {
    <ApiDependency />
    <Counter_useState />
     <Exmple />
+    <Parent />
    </>
   );
 }
