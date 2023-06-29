@@ -7,6 +7,8 @@ import ApiDependency from './useEffect/ApiDependency';
 import Counter_useState from './useReducer/Counter_useState';
 import Exmple from './useRef/Exmple';
 import Parent from './useRef/forwordRef/Parent';
+import Counter_without_useMemo from './useMemo/Counter_without_useMemo';
+import Counter_with_useMemo from './useMemo/Counter_with_useMemo';
 
 
 
@@ -20,6 +22,8 @@ function App() {
    <Counter_useState />
     <Exmple />
     <Parent />
+    <Counter_without_useMemo />
+    <Counter_with_useMemo />
    </>
   );
 }

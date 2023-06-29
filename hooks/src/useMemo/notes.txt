@@ -1,0 +1,30 @@
+*In React.js, 
+the useMemo hook is used to memoize the result of a
+function or a value and only recompute it when its dependencies change. 
+It is primarily used for performance optimization by avoiding unnecessary calculations or expensive operations.
+
+The useMemo hook takes two arguments: 
+a function or a value to memoize, 
+and an array of dependencies. 
+The hook will recompute the memoized value whenever any of the dependencies in the array change. If the dependencies remain the same between renders, 
+useMemo will return the previously memoized value without recomputing it.
+
+import {useMemo} from 'react';
+const memofunction=useMemo(()=>{
+    function();
+},[depandency1,depandency2....]);
+
+it will ensures that this function inside useMemo only changes accroding to depandencies 
+specified in this array.
+
+
+The main problem with Counter_without_useMemo file is that -
+once you click the clickItem buton it will also return count function (multiCount()) that 
+is bad for user Experiece and memoization.
+
+When you click the clickItem button, it triggers a state update for item by calling setItem. 
+This state update causes the component to re-render. 
+Since the multiCount function is invoked as part of the rendering process, 
+it is also re-executed, resulting in the console log statement being printed.
+
+to avoid this , we must uses useMemo Hooks.
