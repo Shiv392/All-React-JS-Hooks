@@ -1,0 +1,21 @@
+context api is a data sending from parent to diffrent component of the application.
+architechure
+Root: parent-
+child: A -
+       B - D 
+       C - E - F
+
+we are sending some props form root component to component  A , D & E.
+
+For A, we can direct pass props from parent to A .
+For D, we can pass through B then D.
+For F, we have to pass through C -> E -> F.
+
+it is very dificult to share props among all child component so 
+we uses context . 
+## Context API :-
+Context provides data to the tree to all component without passing it 
+to manually at every level.
+
+we made same programe for two ways, without using usecontext and by using usecontext hoks;
+
