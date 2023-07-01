@@ -11,6 +11,7 @@ import Counter_without_useMemo from './useMemo/Counter_without_useMemo';
 import Counter_with_useMemo from './useMemo/Counter_with_useMemo';
 import ParentContext from './useContext/without_useContext/ParentContext';
 import Parent_Context_hook from './useContext/with_useContext/Parent_Context_hook';
+import Counter_useCallBack from './useCallBack/Counter_useCallBack';
 
 
 
@@ -28,6 +29,7 @@ function App() {
     <Counter_with_useMemo />
    <ParentContext />
    <Parent_Context_hook />
+   <Counter_useCallBack />
    </>
   );
 }

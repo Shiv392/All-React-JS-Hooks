@@ -1,0 +1,5 @@
+usecallback is also used for memoization
+it is also similar to useMemo.
+
+useMemo returns tha memoize value 
+usecallback returns the memoize function.
