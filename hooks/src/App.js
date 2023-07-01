@@ -12,6 +12,7 @@ import Counter_with_useMemo from './useMemo/Counter_with_useMemo';
 import ParentContext from './useContext/without_useContext/ParentContext';
 import Parent_Context_hook from './useContext/with_useContext/Parent_Context_hook';
 import Counter_useCallBack from './useCallBack/Counter_useCallBack';
+import CounteruseLayoutEffect from './uselayoutEffect/CounteruseLayoutEffect';
 
 
 
@@ -30,6 +31,7 @@ function App() {
    <ParentContext />
    <Parent_Context_hook />
    <Counter_useCallBack />
+   <CounteruseLayoutEffect />
    </>
   );
 }

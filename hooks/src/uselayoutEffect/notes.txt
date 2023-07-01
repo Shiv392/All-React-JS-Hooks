@@ -1,0 +1,10 @@
+useLayOutEffect is also similar to useEffect.
+
+useLayOutEffect(effect,
+[depandacies]
+)
+
+useLayOutEffect effect peforms effect synchoronously.
+useEffect peforms effect asynchorounously.
+
+this is the main diff between useLayOutEffect and useEffect.
